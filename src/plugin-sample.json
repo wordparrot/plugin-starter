@@ -1,0 +1,16 @@
+{
+    "name": "mailgun",
+    "title": "Mailgun - Official",
+    "description": "Send emails using Mailgun.",
+    "private": false,
+    "hubPluginId": "684abfab-e64d-4cb2-8234-7fedd70d69fe",
+    "platform": "Mailgun",
+    "website": "https://www.mailgun.com",
+    "version": "1.0.0",
+    "repository": "https://github.com/wordparrot/integration-mailgun",
+    "author": "bobross",
+    "license": "MIT",
+    "logo": "mailgun.svg",
+    "categories": [],
+    "subcategories": []
+}

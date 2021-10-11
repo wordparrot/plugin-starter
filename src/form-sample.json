@@ -1,0 +1,131 @@
+{
+    "actions": [
+        {
+            "name": "action.mailgun",
+            "title": "Mailgun",
+            "description": "Add Mailgun email configuration here.",
+            "type": "pipelineNode",
+            "initialValues": {
+                "domain": "",
+                "from":"",
+                "to":"",
+                "prospectiveTitle":"",
+                "prospectiveContent":""
+            },
+            "validationSchema": [
+                {
+                    "property": "domain",
+                    "type":"string",
+                    "requirement": "required"
+                },
+                {
+                    "property": "from",
+                    "type":"string",
+                    "requirement": "required"
+                },
+                {
+                    "property": "to",
+                    "type":"string",
+                    "requirement": "required"
+                },
+                {
+                    "property": "prospectiveTitle",
+                    "type": "string",
+                    "requirement": "required"
+                },
+                {
+                    "property": "prospectiveContent",
+                    "type": "string",
+                    "requirement": "required"
+                }
+            ],
+            "fields": [
+                {
+                    "value": "domain",
+                    "label": "Full Sending Domain (e.g. https://api.mailgun.net/)"
+                },
+                {
+                    "value": "from",
+                    "label": "Sender"
+                },
+                {
+                    "value": "to",
+                    "label": "Recipients"
+                },
+                {
+                    "value": "prospectiveTitle",
+                    "label": "Subject"
+                },
+                {
+                    "value": "prospectiveContent",
+                    "label": "Content"
+                }
+            ]
+        }
+    ],
+    "listeners": [
+        {
+            "name": "listener.inbound",
+            "title": "Mailgun - Inbound Listener",
+            "description": "Listen for new emails to the provided address.",
+            "type": "listener",
+            "initialValues": {
+                "domain": "",
+                "email": ""
+            },
+            "validationSchema": [
+                {
+                    "property": "domain",
+                    "type":"string",
+                    "requirement": "required"
+                },
+                {
+                    "property": "email",
+                    "type":"string",
+                    "requirement": "required"
+                }
+            ],
+            "fields": [
+                {
+                    "value": "domain",
+                    "label": "Full Sending Domain (e.g. https://api.mailgun.net/)"
+                },
+                {
+                    "value": "email",
+                    "label": "Email"
+                }
+            ]
+        }
+    ],
+    "credentials": [
+        {
+            "name": "gmail",
+            "title": "Gmail Credentials",
+            "description": "Add Gmail authorization credentials",
+            "fields": [
+                {
+                    "value": "providerToken",
+                    "label": "API Key"
+                }
+            ],
+            "initialValues": {
+                "providerId": "",
+                "providerSecret": "",
+                "providerAuthResponse": "",
+                "hasAuthCallback": true,
+                "hasAuthTest": true
+            },
+            "validationSchema": [
+                {
+                    "property": "providerToken",
+                    "type": "string",
+                    "requirement": "required"
+                }
+            ],
+            "actions": [
+                "mailgun",
+                "mailgun.inbound"
+            ]
+        }
+    ]
+}
