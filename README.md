@@ -1,14 +1,12 @@
-# Webpack typescript starter
+# Wordparrot Plugin Starter
 
-Webpack typescript starter with:
+Featuring:
 
 - Webpack 5
 - Typescript
 - Scss
 - Ts-jest
 - Eslint
-
-## [Demo](https://webpack-typescript-starter.netlify.app/)
 
 ## Getting started
 
@@ -42,12 +40,4 @@ npm run test
 
 ```bash
 npm run coverage
-```
-
-### Docker
-
-Or simply run the example using docker:
-
-```bash
-docker-compose up
 ```
