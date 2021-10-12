@@ -3,7 +3,7 @@
 // import {sampleCallback} from './credentials/sample.callback'
 // import {sampleTest} from './credentials/sample.test'
 
-const wordparrotPluginIndex = () => {
+const moduleIndex = () => {
     const actions = () => {
         return {
             // ["sampleAction"]: {
@@ -36,4 +36,4 @@ const wordparrotPluginIndex = () => {
     }
 }
 
-export default wordparrotPluginIndex
+export default moduleIndex

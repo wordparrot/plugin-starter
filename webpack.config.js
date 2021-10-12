@@ -34,6 +34,11 @@ module.exports = function () {
     output: {
       filename: 'index.min.js',
       path: path.resolve(__dirname, 'dist'),
+      library: {
+        name: 'sandboxModule',
+        type: 'var',
+        export: 'default',
+      },
     },
     plugins: [
       new NodePolyfillPlugin(),
@@ -71,7 +76,6 @@ module.exports = function () {
         "https": false,
         "stream": false,
         "crypto": false,
-        "crypto-browserify": require.resolve('crypto-browserify'), //if you want to use this module also don't forget npm i crypto-browserify 
       }
     },
   }
