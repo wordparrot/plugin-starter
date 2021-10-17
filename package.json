@@ -28,7 +28,8 @@
     "webpack": "^5.57.1",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.3.1",
-    "webpack-merge": "^5.8.0"
+    "webpack-merge": "^5.8.0",
+    "node-polyfill-webpack-plugin": "^1.1.4"
   },
   "scripts": {
     "start": "yarn install && cross-env NODE_ENV=development webpack serve",
@@ -38,6 +39,6 @@
     "pack": "cross-env NODE_ENV=production webpack"
   },
   "dependencies": {
-    "node-polyfill-webpack-plugin": "^1.1.4"
+    
   }
 }
