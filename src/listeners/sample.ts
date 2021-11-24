@@ -1,4 +1,4 @@
-export const sampleListener = async (config: any, lib: any): Promise<{
+export const sampleListener = async (mainParameters: Record<string, any>, lib: any): Promise<{
     passEvent: boolean
 }> => {
     // Write code here

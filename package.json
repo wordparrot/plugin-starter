@@ -39,6 +39,6 @@
     "pack": "cross-env NODE_ENV=production webpack"
   },
   "dependencies": {
-    
+    "wordparrot/plugin-types": "git://github.com/wordparrot/plugin-types.git"
   }
 }
