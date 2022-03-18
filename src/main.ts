@@ -1,40 +1,24 @@
-import { gmailList } from './actions/list'
-import { gmailLabel } from './actions/label'
-import { gmailListenerInbox } from './listeners/listener.inbox'
-import { gmailRefreshToken } from "./credentials/authCallback"
-import { gmailTest } from './credentials/test'
-import { gmailForward } from './actions/forward'
-// Gmail API Reference: https://developers.google.com/gmail/api/reference/rest
+import { 
+    PluginMainModule, 
+    PluginModuleActionFactory,
+    PluginModuleListenerFactory,
+    PluginModuleCredentialFactory
+} from 'wordparrot-types'
 
-const moduleIndex = () => {
-    const actions = () => {
+const mainModuleFactory = (): PluginMainModule => {
+    const actions: PluginModuleActionFactory = () => {
         return {
-            ["wordparrot-gmail.read"]: {
-                main: gmailList,
-            },
-            ["wordparrot-gmail.label"]: {
-                main: gmailLabel,
-            },
-            ["wordparrot-gmail.forward"]: {
-                main: gmailForward,
-            }
+            
         }
     }
     
-    const listeners = () => {
-        return {
-            ["wordparrot-gmail.inbox"]: {
-                main: gmailListenerInbox
-            }
-        }
+    const listeners: PluginModuleListenerFactory = () => {
+        return {}
     }
 
-    const credentials = () => {
+    const credentials: PluginModuleCredentialFactory = () => {
         return {
-            ["wordparrot-gmail.read"]: {
-                authCallback: gmailRefreshToken,
-                test: gmailTest,
-            }
+            
         }
     }
 
@@ -45,4 +29,4 @@ const moduleIndex = () => {
     }
 }
 
-export default moduleIndex
+export default mainModuleFactory

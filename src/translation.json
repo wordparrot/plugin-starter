@@ -1,55 +1,7 @@
 {
     "languages": {
         "en": {
-            "inbox.test": {
-                "title": "Inbox Test Error",
-                "description": "It's a test error from the inbox.",
-                "recommendation": "We recommend the following URL:",
-                "urlLabel": "API documentation",
-                "url": "https://developers.google.com/gmail/api/reference/rest"
-            },
-            "email_address_invalid": {
-                "title": "Email Address Invalid",
-                "description": "The email address you have provided is not allowed.",
-                "recommendation": "Please go to listener settings and input a new address, then try again.",
-                "urlLabel": "API documentation",
-                "url": "https://developers.google.com/gmail/api/reference/rest"
-            },
-            "actions-list-connection_error": {
-                "title": "Action Connection Error",
-                "description": "Your action was unable to connect to the API.",
-                "recommendation": "Please check to make sure your credentials are valid, then try again.",
-                "urlLabel": "API documentation",
-                "url": "https://developers.google.com/gmail/api/reference/rest"
-            },
-            "actions-label-connection_error": {
-                "title": "Action - Label Connection Error",
-                "description": "You were unable to fetch your current labels.",
-                "recommendation": "Please make sure your credential grants you permissions to see labels.",
-                "urlLabel": "API documentation",
-                "url": "https://developers.google.com/gmail/api/reference/rest"
-            },
-            "actions-label-creation_error": {
-                "title": "Action - Label Creation Error",
-                "description": "You were unable to create a new label with the provided parameters.",
-                "recommendation": "Please make sure you have submitted a valid text value.",
-                "urlLabel": "API documentation",
-                "url": "https://developers.google.com/gmail/api/reference/rest"
-            },
-            "actions-label-update_error": {
-                "title": "Action - Label Update Error",
-                "description": "You were unable to assign the following label to these messages.",
-                "recommendation": "Please make sure you are using a valid text value.",
-                "urlLabel": "API documentation",
-                "url": "https://developers.google.com/gmail/api/reference/rest"
-            },
-            "listeners-inbox-connection_error": {
-                "title": "Listener Connection Error",
-                "description": "Your listener was unable to connect to the API.",
-                "recommendation": "Please check to make sure your credentials are valid, then try again.",
-                "urlLabel": "API documentation",
-                "url": "https://developers.google.com/gmail/api/reference/rest"
-            }
+            "test_succeeded": "Test succeeded."
         }
     }
 }

@@ -455,7 +455,6 @@
                     "value": "Obtaining an authorization code",
                     "label": "Retrieve an authorization code by logging into Gmail. Find the code after you login and are redirected.",
                     "type": "header",
-                    "prerequisites": ["clientId", "clientSecret", "redirectURI"],
                     "link": {
                         "text": "Authenticate to Gmail here.",
                         "href": "https://accounts.google.com/o/oauth2/v2/auth?client_id={clientId}&response_type=code&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.labels%20https://www.googleapis.com/auth/gmail.readonly%20https://www.googleapis.com/auth/gmail.compose%20https://www.googleapis.com/auth/gmail.modify&redirect_uri={redirectURI}&access_type=offline"
@@ -469,13 +468,11 @@
                 {
                     "value": "",
                     "label": "Once you\"ve succeeded, copy the code from the webpage to your clipboard and then paste here.",
-                    "type": "subheader",
-                    "prerequisites": ["clientId", "clientSecret", "redirectURI"]
+                    "type": "subheader"
                 },
                 {
                     "value": "authResponse",
-                    "label": "Code",
-                    "prerequisites": ["clientId", "clientSecret", "redirectURI"]
+                    "label": "Code"
                 }
             ],
             "initialValues": {
