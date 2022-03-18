@@ -2,10 +2,6 @@ import { DynamicServiceBody, CredentialReturnValue, SandboxLib } from 'wordparro
 
 export const sampleCredential = async (body: DynamicServiceBody, lib: SandboxLib): CredentialReturnValue => {
     return {
-        result: true,
-        data: {
-            output: {
-            }
-        }
+        
     }
 }
