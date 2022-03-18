@@ -1,10 +1,12 @@
-export const sampleListener = async (config: any, lib: any): Promise<{
-    passEvent: boolean
-}> => {
-    // Write code here
+import { DynamicServiceBody, ListenerReturnValue, SandboxLib } from 'wordparrot-types'
 
-    // Return passEvent: false to disable invocation of pipeline actions.
+export const sampleListener = async (body: DynamicServiceBody, lib: SandboxLib): ListenerReturnValue => {
     return {
-        passEvent: true
+        result: true,
+        data: {
+            output: {
+                passEvent: true,
+            }
+        }
     }
 }

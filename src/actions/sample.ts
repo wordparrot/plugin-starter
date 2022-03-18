@@ -1,16 +1,12 @@
-export const sampleAction = async (config: any, lib: any): Promise<any> => {
-    // Write code here
+import { DynamicServiceBody, ActionReturnValue, SandboxLib } from 'wordparrot-types'
+import { Axios, AxiosResponse } from 'axios'
 
-    // Wordparrot's plugin sandbox will make commonly-used libraries available upon execution.
-    // They do not need to be bundled.
-    // const { axios, _, dateFns } = lib
-
-    // Return itemsToPassOn: [json values] to add json data to the pipeline job.
-    // Return filesToPassOn: [file metadata] to add file data to the pipeline job.
+export const sampleAction = async (body: DynamicServiceBody, lib: SandboxLib): ActionReturnValue => {
     return {
-        itemsToPassOn: [],
-        itemsToRemove: [],
-        filesToPassOn: [],
-        filesToRemove: [],
+      message: 'test_succeeded',
+      itemsToPassOn: [],
+      filesToPassOn: [],
+      tokensToPassOn: []
     }
 }
+

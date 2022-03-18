@@ -1,31 +1,24 @@
-// import {sampleAction} from './actions/sample'
-// import {sampleListener} from './listeners/sample'
-// import {sampleCallback} from './credentials/sample.callback'
-// import {sampleTest} from './credentials/sample.test'
+import { 
+    PluginMainModule, 
+    PluginModuleActionFactory,
+    PluginModuleListenerFactory,
+    PluginModuleCredentialFactory
+} from 'wordparrot-types'
 
-const moduleIndex = () => {
-    const actions = () => {
+const mainModuleFactory = (): PluginMainModule => {
+    const actions: PluginModuleActionFactory = () => {
         return {
-            // ["sampleAction"]: {
-            //     main: sampleAction
-            // }
+            
         }
     }
     
-    const listeners = () => {
-        return {
-            // ["sampleListener"]: {
-            //     main: sampleListener,
-            // }
-        }
+    const listeners: PluginModuleListenerFactory = () => {
+        return {}
     }
 
-    const credentials = () => {
+    const credentials: PluginModuleCredentialFactory = () => {
         return {
-            // ["sampleCredential"]: {
-            //     authCallback: sampleCallback,
-            //     test: sampleTest
-            // }
+            
         }
     }
 
@@ -36,4 +29,4 @@ const moduleIndex = () => {
     }
 }
 
-export default moduleIndex
+export default mainModuleFactory
