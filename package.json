@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "description": "Wordparrot - Official Reddit Integration",
-  "name": "wordparrot-official-reddit",
+  "description": "Wordparrot - Plugin Starter",
+  "name": "wordparrot-plugin-starter",
   "license": "MIT",
   "keywords": [
     "webpack",
@@ -74,6 +74,7 @@
     "test": "jest --watchAll",
     "build": "yarn install && npm run pack && node ./scripts/json.js && node ./scripts/zip.js",
     "pack": "cross-env NODE_ENV=production webpack",
-    "start:test": "node ./bin/www"
+    "start:test": "node ./bin/www",
+    "flush-modules": "rm -rf node_modules && rm yarn.lock && yarn install"
   }
 }

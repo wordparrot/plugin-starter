@@ -2,7 +2,8 @@ import {
     PluginMainModule, 
     PluginModuleActionFactory,
     PluginModuleListenerFactory,
-    PluginModuleCredentialFactory
+    PluginModuleCredentialFactory,
+    PluginModuleWebhookFactory,
 } from 'wordparrot-types'
 
 const mainModuleFactory = (): PluginMainModule => {
@@ -13,7 +14,9 @@ const mainModuleFactory = (): PluginMainModule => {
     }
     
     const listeners: PluginModuleListenerFactory = () => {
-        return {}
+        return {
+            
+        }
     }
 
     const credentials: PluginModuleCredentialFactory = () => {
@@ -22,10 +25,17 @@ const mainModuleFactory = (): PluginMainModule => {
         }
     }
 
+    const webhooks: PluginModuleWebhookFactory = () => {
+        return {
+            
+        }
+    }
+
     return {
         actions,
-        listeners,
         credentials,
+        listeners,
+        webhooks,
     }
 }
 
