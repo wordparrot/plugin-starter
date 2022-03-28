@@ -1,6 +1,6 @@
-import { DynamicServiceBody, CredentialReturnValue, SandboxLib } from 'wordparrot-types'
+import { CredentialReturnValue, SandboxLib, DynamicServiceBodyCredentialType } from 'wordparrot-types'
 
-export const sampleCredential = async (body: DynamicServiceBody, lib: SandboxLib): CredentialReturnValue => {
+export const sampleCredential = async (body: DynamicServiceBodyCredentialType, lib: SandboxLib): CredentialReturnValue => {
     return {
         
     }

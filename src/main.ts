@@ -33,8 +33,8 @@ const mainModuleFactory = (): PluginMainModule => {
 
     return {
         actions,
-        credentials,
         listeners,
+        credentials,
         webhooks,
     }
 }

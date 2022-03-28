@@ -1,12 +1,7 @@
 import mainModuleFactory from './main'
 
-const {
-    actions,
-    credentials,
-    listeners, 
-    webhooks,
-} = mainModuleFactory()
+const {actions, listeners, credentials, webhooks} = mainModuleFactory()
 
 export default function sandboxModule() {
-    return { actions, credentials, listeners, webhooks }
+    return {actions, listeners, credentials, webhooks}
 }

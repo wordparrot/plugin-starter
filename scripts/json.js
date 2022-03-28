@@ -1,10 +1,14 @@
+const getPluginJson = require('./get-plugin-json.js')
+
 const fs = require('fs')
 const path = require('path')
 const util = require('util');
 const copyFilePromisified = util.promisify(fs.copyFile)
 
+const pluginJson = getPluginJson()
+
 const srcPath = path.resolve(process.cwd(), 'src')
-const outputPath = path.resolve(process.cwd(), 'dist')
+const outputPath = path.resolve(process.cwd(), 'dist', pluginJson.name)
 
 const FileHound = require('filehound');
 

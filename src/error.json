@@ -1,48 +1,8 @@
 {
     "actions": {
-        "inbox-test": {
-            "title": "inbox-test.title",
-            "description": "inbox-test.description",
-            "recommendation": "inbox-test.recommendation",
-            "url": "inbox-test.url"
-        },
-        "actions-list-connection_error": {
-            "title": "actions-list-connection_error.title",
-            "description": "actions-list-connection_error.description",
-            "recommendation": "actions-list-connection_error.recommendation",
-            "url": "actions-list-connection_error.url"
-        },
-        "actions-label-connection_error": {
-            "title": "actions-label-connection_error.title",
-            "description": "actions-label-connection_error.description",
-            "recommendation": "actions-label-connection_error.recommendation",
-            "url": "actions-label-connection_error.url"
-        },
-        "actions-label-creation_error": {
-            "title": "actions-label-creation_error.title",
-            "description": "actions-label-creation_error.description",
-            "recommendation": "actions-label-creation_error.recommendation",
-            "url": "actions-label-creation_error.url"
-        },
-        "actions-label-update_error": {
-            "title": "actions-label-update_error.title",
-            "description": "actions-label-update_error.description",
-            "recommendation": "actions-label-update_error.recommendation",
-            "url": "actions-label-update_error.url"
-        }
+        
     },
     "listeners": {
-        "email_address_invalid": {
-            "title": "email_address_invalid.title",
-            "description": "email_address_invalid.description",
-            "recommendation": "email_address_invalid.recommendation",
-            "url": "email_address_invalid.url"
-        },
-        "listeners-inbox-connection_error": {
-            "title": "listeners-inbox-connection_error.title",
-            "description": "listeners-inbox-connection_error.description",
-            "recommendation": "listeners-inbox-connection_error.recommendation",
-            "url": "listeners-inbox-connection_error.url"
-        }
+        
     }
 }

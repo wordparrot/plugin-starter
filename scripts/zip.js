@@ -2,8 +2,11 @@ const fs = require('fs')
 const path = require('path')
 const archiver = require('archiver')
 
+const getPluginJson = require('./get-plugin-json.js')
+const pJson = getPluginJson()
+
 const inputPath = path.resolve(process.cwd(), 'dist')
-const output = fs.createWriteStream('dist.zip');
+const output = fs.createWriteStream(`${pJson.name}.zip`);
 const archive = archiver('zip');
 
 output.on('close', function () {
