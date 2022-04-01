@@ -5,10 +5,10 @@ const path = require('path')
 const util = require('util');
 const copyFilePromisified = util.promisify(fs.copyFile)
 
-const pluginJson = getPluginJson()
+const pJson = getPluginJson()
 
 const srcPath = path.resolve(process.cwd(), 'src')
-const outputPath = path.resolve(process.cwd(), 'dist', pluginJson.name)
+const outputPath = path.resolve(process.cwd(), 'dist', `${pJson.author}.${pJson.name}`)
 
 const FileHound = require('filehound');
 

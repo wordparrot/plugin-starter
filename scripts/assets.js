@@ -2,12 +2,12 @@ const fs = require('fs')
 const path = require('path')
 const getPluginJson = require('./get-plugin-json.js')
 
-const pluginJson = getPluginJson()
+const pJson = getPluginJson()
 
 const srcPath = path.resolve(process.cwd(), 'public')
 const indexPath = path.resolve(process.cwd(), 'dist', 'index.min.js')
-const outputPath = path.resolve(process.cwd(), 'dist', pluginJson.name)
-const indexOutputPath = path.resolve(process.cwd(), 'dist', pluginJson.name, 'index.min.js')
+const outputPath = path.resolve(process.cwd(), 'dist', `${pJson.author}.${pJson.name}`)
+const indexOutputPath = path.resolve(process.cwd(), 'dist', `${pJson.author}.${pJson.name}`, 'index.min.js')
 
 function copyFileSync( source, target ) {
 
