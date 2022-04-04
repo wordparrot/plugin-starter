@@ -1,7 +1,7 @@
 const path = require('path')
 
 const getPluginJson = function() {
-    const pluginJsonPath = path.resolve(process.cwd(), 'src', 'plugin.json')
+    const pluginJsonPath = path.resolve(process.cwd(), 'src', 'config', 'plugin.json')
 
     const pluginJson = require(pluginJsonPath)
     

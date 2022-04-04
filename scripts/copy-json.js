@@ -7,23 +7,23 @@ const copyFilePromisified = util.promisify(fs.copyFile)
 
 const pJson = getPluginJson()
 
-const srcPath = path.resolve(process.cwd(), 'src')
+const configPath = path.resolve(process.cwd(), 'src', 'config')
 const outputPath = path.resolve(process.cwd(), 'dist', `${pJson.author}.${pJson.name}`)
 
 const FileHound = require('filehound');
 
 FileHound.create()
-  .paths(srcPath)
+  .paths(configPath)
   .ext('json')
   .find()
-  .then((fileNames) => {
+  .then((filenames) => {
     console.log('Copied files:')
-    console.log(fileNames)
+    console.log(filenames)
     return Promise.all(
-      fileNames.map(fileName => {
-        const fragmented = fileName.split('/')
+      filenames.map(filename => {
+        const fragmented = filename.split('/')
         const name = fragmented[fragmented.length - 1]
-        return copyFilePromisified(fileName, path.join(outputPath, name))
+        return copyFilePromisified(filename, path.join(outputPath, name))
       })
     )
   })

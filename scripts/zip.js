@@ -11,7 +11,7 @@ const archive = archiver('zip');
 
 output.on('close', function () {
   console.log(archive.pointer() + ' total bytes');
-  console.log(`${pJson.author}.${pJson.name}.zip has been created.`);
+  console.log(`${pJson.name}.zip has been created.`);
 });
 
 archive.on('error', function(err){
