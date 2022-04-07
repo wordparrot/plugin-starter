@@ -49,14 +49,12 @@ function copyFolderRecursiveSync( source, target ) {
 (async function() {
     try {
         await copyFolderRecursiveSync(srcPath, outputPath)
-        console.log('Copied public to dist folder.')
     } catch (e) {
         console.log(e)
     }
 
     try {
         fs.renameSync(indexPath, indexOutputPath);
-        console.log('Copied index.min.js to dist folder.')
     } catch (e) {
         console.log(e)
     }

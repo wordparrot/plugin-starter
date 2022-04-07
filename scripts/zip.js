@@ -10,8 +10,9 @@ const output = fs.createWriteStream(`${pJson.author}.${pJson.name}.zip`);
 const archive = archiver('zip');
 
 output.on('close', function () {
+  console.log(`${pJson.author}.${pJson.name}.zip has been created.`);
   console.log(archive.pointer() + ' total bytes');
-  console.log(`${pJson.name}.zip has been created.`);
+  console.log(`Version: ${pJson.version}`)
 });
 
 archive.on('error', function(err){

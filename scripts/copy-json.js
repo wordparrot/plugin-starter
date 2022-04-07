@@ -18,7 +18,10 @@ FileHound.create()
   .find()
   .then((filenames) => {
     console.log('Copied files:')
-    console.log(filenames)
+    console.log(filenames.map(filename => {
+      const filenameFragments = filename.split('/')
+      return filenameFragments[filenameFragments.length - 1]
+    }))
     return Promise.all(
       filenames.map(filename => {
         const fragmented = filename.split('/')
@@ -26,9 +29,6 @@ FileHound.create()
         return copyFilePromisified(filename, path.join(outputPath, name))
       })
     )
-  })
-  .then(() => {
-    console.log('JSON files in src copied to dist folder.')
   })
   .catch((err) => {
     console.log(err)

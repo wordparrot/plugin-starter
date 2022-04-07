@@ -35,7 +35,7 @@
     "morgan": "^1.10.0",
     "pm2": "^5.1.2",
     "pupa": "^3.1.0",
-    "qs": "^6.10.1",
+    "qs": "^6.10.3",
     "rxjs": "^7.3.1",
     "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^4.1.6",
@@ -72,7 +72,7 @@
     "start": "yarn install && cross-env NODE_ENV=development webpack serve",
     "coverage": "jest --collect-coverage",
     "test": "jest --watchAll",
-    "build": "yarn install && npm run pack && node ./scripts/json.js && node ./scripts/zip.js",
+    "build": "yarn install && npm run pack && tsc src/config/*.ts && node ./scripts/convert-json.js && node ./scripts/create-plugin-folder.js && node ./scripts/copy-json.js && node ./scripts/assets.js && node ./scripts/zip.js && node ./scripts/cleanup-json.js",
     "pack": "cross-env NODE_ENV=production webpack",
     "start:test": "node ./bin/www",
     "flush-modules": "rm -rf node_modules && rm yarn.lock && yarn install"
