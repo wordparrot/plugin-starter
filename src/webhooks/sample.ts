@@ -5,7 +5,7 @@ import {
 } from 'wordparrot-types'
 
 export const sampleWebhook = async (body: DynamicServiceBody, lib: SandboxLib): WebhookReturnValue => {
-    const { request, webhook, routeId } = body.webhook
+    const { request, webhook, routeId } = body?.webhook || {}
     
     return {
         webhookResponse: {

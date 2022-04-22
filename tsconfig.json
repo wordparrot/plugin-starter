@@ -9,8 +9,17 @@
     "allowJs": true,
     "moduleResolution": "node",
     "baseUrl": ".",
-    "paths": {
-      "*": ["src/*"]
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "checkJs": true,
+    "isolatedModules": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "resolveJsonModule": true,
+    "paths" : {
+      "src/*": ["./src/*"]
     }
   },
   "include": [

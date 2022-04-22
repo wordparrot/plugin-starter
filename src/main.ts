@@ -12,14 +12,14 @@ const mainModuleFactory = (): PluginMainModule => {
             
         }
     }
-    
-    const listeners: PluginModuleListenerFactory = () => {
+
+    const credentials: PluginModuleCredentialFactory = () => {
         return {
             
         }
     }
 
-    const credentials: PluginModuleCredentialFactory = () => {
+    const listeners: PluginModuleListenerFactory = () => {
         return {
             
         }
@@ -33,8 +33,8 @@ const mainModuleFactory = (): PluginMainModule => {
 
     return {
         actions,
-        listeners,
         credentials,
+        listeners,
         webhooks,
     }
 }
