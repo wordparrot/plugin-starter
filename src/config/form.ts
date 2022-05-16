@@ -5,6 +5,7 @@ const Form: PluginFormConfiguration = {
     credentials: [],
     listeners: [],
     webhooks: [],
+    blueprints: [],
 }
 
 export default Form
