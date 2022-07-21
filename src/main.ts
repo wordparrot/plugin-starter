@@ -1,42 +1,19 @@
 import { 
-    PluginMainModule, 
-    PluginModuleActionFactory,
-    PluginModuleListenerFactory,
-    PluginModuleCredentialFactory,
-    PluginModuleWebhookFactory,
+    PluginMainModule,
 } from 'wordparrot-types'
 
-const mainModuleFactory = (): PluginMainModule => {
-    const actions: PluginModuleActionFactory = () => {
-        return {
-            
-        }
-    }
+import { actions } from './actions'
+import { credentials } from './credentials'
+import { listeners } from './listeners'
+import { webhooks } from './webhooks'
 
-    const credentials: PluginModuleCredentialFactory = () => {
-        return {
-            
-        }
-    }
-
-    const listeners: PluginModuleListenerFactory = () => {
-        return {
-            
-        }
-    }
-
-    const webhooks: PluginModuleWebhookFactory = () => {
-        return {
-            
-        }
-    }
-
+const ModuleFactory = (): PluginMainModule => {    
     return {
         actions,
-        credentials,
         listeners,
+        credentials,
         webhooks,
     }
 }
 
-export default mainModuleFactory
+export default ModuleFactory

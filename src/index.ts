@@ -1,7 +1,5 @@
-import mainModuleFactory from './main'
-
-const {actions, listeners, credentials, webhooks} = mainModuleFactory()
+import ModuleFactory from './main'
 
 export default function sandboxModule() {
-    return {actions, listeners, credentials, webhooks}
+    return ModuleFactory()
 }

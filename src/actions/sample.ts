@@ -5,7 +5,6 @@ export const sampleAction = async (body: DynamicServiceBody, lib: SandboxLib): A
     return {
       message: 'test_succeeded',
       itemsToPassOn: [],
-      filesToPassOn: [],
       tokensToPassOn: []
     }
 }

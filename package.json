@@ -72,9 +72,12 @@
     "start": "yarn install && cross-env NODE_ENV=development webpack serve",
     "coverage": "jest --collect-coverage",
     "test": "jest --watchAll",
-    "build": "yarn install && npm run pack && tsc src/config/*.ts && node ./scripts/convert-json.js && node ./scripts/create-plugin-folder.js && node ./scripts/copy-json.js && node ./scripts/assets.js && node ./scripts/zip.js && node ./scripts/cleanup-json.js",
-    "pack": "cross-env NODE_ENV=production webpack",
     "start:test": "node ./bin/www",
-    "flush-modules": "rm -rf node_modules && rm yarn.lock && yarn install"
+    "flush-modules": "rm -rf node_modules && rm yarn.lock && yarn install",
+    "build:dev": "yarn install && npm run pack:dev && npm run build-scripts",
+    "build:prod": "yarn install && npm run pack:prod && npm run build-scripts",
+    "pack:dev": "cross-env NODE_ENV=development webpack",
+    "pack:prod": "cross-env NODE_ENV=production webpack",
+    "build-scripts": "tsc src/config/*.ts && node ./scripts/convert-json.js && node ./scripts/create-plugin-folder.js && node ./scripts/copy-json.js && node ./scripts/assets.js && node ./scripts/zip.js && node ./scripts/cleanup-json.js"
   }
 }
