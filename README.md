@@ -4,9 +4,7 @@ Featuring:
 
 - Webpack 5
 - Typescript
-- Scss
-- Ts-jest
-- Eslint
+- Husky, Prettier, Eslint
 
 ## Getting started
 
@@ -15,7 +13,7 @@ Make sure to have NodeJs already installed.
 ### Install all dependencies
 
 ```bash
-npm install
+yarn install
 ```
 
 ### Start developing and serve your app
@@ -28,16 +26,4 @@ npm start
 
 ```bash
 npm run build
-```
-
-### Run unit tests
-
-```bash
-npm run test
-```
-
-### Run coverage
-
-```bash
-npm run coverage
 ```
