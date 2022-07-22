@@ -19,9 +19,13 @@
     "build:prod": "yarn install && npm run pack:prod && npm run build-scripts",
     "pack:dev": "cross-env NODE_ENV=development webpack",
     "pack:prod": "cross-env NODE_ENV=production webpack",
-    "build-scripts": "tsc src/config/*.ts && node ./scripts/convert-json.js && node ./scripts/create-plugin-folder.js && node ./scripts/copy-json.js && node ./scripts/assets.js && node ./scripts/zip.js && node ./scripts/cleanup-json.js",
+    "build-scripts": "npm run compile-config && npm run copy-config && npm run copy-assets && npm run cleanup",
     "prettier:check": "prettier --config ./.prettierrc --check .",
-    "prettier:write": "prettier --config ./.prettierrc --write ."
+    "prettier:write": "prettier --config ./.prettierrc --write .",
+    "compile-config": "tsc src/config/*.ts ",
+    "copy-config": "node ./scripts/convert-json.js && node ./scripts/create-plugin-folder.js && node ./scripts/copy-json.js",
+    "copy-assets": "node ./scripts/assets.js && node ./scripts/zip.js",
+    "cleanup": "node ./scripts/cleanup-providers.js && node ./scripts/cleanup-json.js"
   },
   "browserslist": {
     "production": [
