@@ -10,7 +10,7 @@ export const listeners: ListenerRegister = () =>
     {
       provider: 'my-profile.my-plugin.my-plugin-function',
       methods: {
-          main: myListener
+        main: myListener
       }
     } 
     */

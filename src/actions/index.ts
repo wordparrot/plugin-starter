@@ -8,9 +8,9 @@ export const actions: ActionRegister = () =>
     /* 
     Enter your actions here. You'll need to register the provider name in ./providers.ts
     {
-      provider: 'my-profile.my-plugin.my-plugin-function',
+      provider: ActionProviders.MY_ACTION,
       methods: {
-          main: myAction
+        main: myAction
       }
     } 
     */

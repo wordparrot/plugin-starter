@@ -8,10 +8,10 @@ export const credentials: CredentialRegister = () =>
     /* 
     Enter your credentials here. You'll need to register the provider name in ./providers.ts
     {
-      provider: 'my-profile.my-plugin.my-plugin-credential-registration',
+      provider: CredentialProviders.MY_CREDENTIAL,
       methods: {
-          authCallback: myAuthCallback,
-          test: myAuthTest,
+        authCallback: myAuthCallback,
+        test: myAuthTest,
       }
     } 
     */

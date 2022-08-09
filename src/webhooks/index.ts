@@ -10,7 +10,7 @@ export const webhooks: WebhookRegister = () =>
     {
       provider: 'my-profile.my-plugin.my-plugin-function',
       methods: {
-          main: myWebhook
+        main: myWebhook
       }
     }
     */

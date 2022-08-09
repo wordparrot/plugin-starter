@@ -25,7 +25,7 @@
     "compile-config": "tsc src/config/*.ts ",
     "copy-config": "node ./scripts/convert-json.js && node ./scripts/create-plugin-folder.js && node ./scripts/copy-json.js",
     "copy-assets": "node ./scripts/assets.js && node ./scripts/zip.js",
-    "cleanup": "node ./scripts/cleanup-providers.js && node ./scripts/cleanup-json.js"
+    "cleanup": "node ./scripts/cleanup-json.js && node ./scripts/cleanup-providers.js"
   },
   "browserslist": {
     "production": [
