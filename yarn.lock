@@ -10572,7 +10572,7 @@ word-wrap@^1.2.3, word-wrap@~1.2.3:
 
 "wordparrot-types@https://github.com/wordparrot/types-core.git":
   version "1.0.0"
-  resolved "https://github.com/wordparrot/types-core.git#c2beb3cfd5676cb834fd745fb89090c8801770e8"
+  resolved "https://github.com/wordparrot/types-core.git#93e6e97eaa48b25d1c9313cb10cf04dde9a7f924"
   dependencies:
     "@commitlint/cli" "^16.2.3"
     "@commitlint/config-conventional" "^16.2.1"

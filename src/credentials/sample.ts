@@ -1,7 +1,7 @@
-import { CredentialReturnValue, SandboxLib, DynamicServiceBody } from 'wordparrot-types'
+import { CredentialReturnValue, SandboxLib, DynamicServiceBody, AuthCallbackStatus } from 'wordparrot-types';
 
 export const sampleCredential = async (body: DynamicServiceBody, lib: SandboxLib): CredentialReturnValue => {
-    return {
-        
-    }
-}
+  return {
+    status: AuthCallbackStatus.VALID,
+  };
+};
