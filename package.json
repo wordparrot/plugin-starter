@@ -19,7 +19,7 @@
     "build:prod": "yarn install && npm run pack:prod && npm run build-scripts",
     "pack:dev": "cross-env NODE_ENV=development webpack",
     "pack:prod": "cross-env NODE_ENV=production webpack",
-    "build-scripts": "npm run compile-config && npm run copy-config && npm run copy-assets && npm run cleanup",
+    "build-scripts": "npm run compile-config && npm run copy-config && npm run cleanup && npm run copy-assets",
     "prettier:check": "prettier --config ./.prettierrc --check .",
     "prettier:write": "prettier --config ./.prettierrc --write .",
     "compile-config": "tsc src/config/*.ts ",
