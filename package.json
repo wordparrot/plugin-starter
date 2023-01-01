@@ -86,7 +86,7 @@
   },
   "devDependencies": {
     "@types/jest": "^27.0.2",
-    "@types/node": "^17.0.21",
+    "@types/node": "^18.11.18",
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "@typescript-eslint/parser": "^5.30.7",
     "@webpack-cli/init": "^1.1.3",
