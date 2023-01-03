@@ -112,7 +112,8 @@
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.3.1",
     "webpack-merge": "^5.8.0",
-    "wordparrot-types": "https://github.com/wordparrot/types-core.git"
+    "wordparrot-types": "https://github.com/wordparrot/types-core.git",
+    "wordparrot-types-backend": "https://github.com/wordparrot/types-backend.git"
   },
   "resolutions": {
     "@commitlint/cli": "^16.2.4",
