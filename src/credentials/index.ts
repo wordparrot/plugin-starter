@@ -11,6 +11,7 @@ export const credentials: CredentialRegister = () =>
       provider: CredentialProviders.MY_CREDENTIAL,
       methods: {
         authCallback: myAuthCallback,
+        generateAuthURI: myGenerateAuthURI,
         test: myAuthTest,
       }
     } 
