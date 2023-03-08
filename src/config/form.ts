@@ -1,11 +1,6 @@
-import { PluginFormConfiguration } from 'wordparrot-types';
+import { FormConfiguration } from 'register';
 
-import { ActionProviders } from '../actions/providers';
-import { CredentialProviders } from '../credentials/providers';
-import { ListenerProviders } from '../listeners/providers';
-import { WebhookProviders } from '../webhooks/providers';
-
-const Form: PluginFormConfiguration<ActionProviders, CredentialProviders, ListenerProviders, WebhookProviders> = {
+const Form: FormConfiguration = {
   actions: [
     /* 
     Enter your action form configuration here. You'll need to register the provider name in ./providers.ts

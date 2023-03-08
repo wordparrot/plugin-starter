@@ -11,7 +11,13 @@ import {
   WebhookRegister,
   WebhookRegisterItem,
   WebhookRegisterValues,
+  PluginFormConfiguration,
 } from 'wordparrot-types';
+
+import { ActionProviders } from './actions/providers';
+import { CredentialProviders } from './credentials/providers';
+import { ListenerProviders } from './listeners/providers';
+import { WebhookProviders } from './webhooks/providers';
 
 export const registerActions: ActionRegister = <T>(actionsArray: ActionRegisterItem<T>[]) => {
   const obj: Record<string, ActionRegisterValues> = {};
@@ -48,3 +54,10 @@ export const registerWebhooks: WebhookRegister = <T>(webhooksArray: WebhookRegis
     return accumulator;
   }, obj);
 };
+
+export type FormConfiguration = PluginFormConfiguration<
+  ActionProviders,
+  CredentialProviders,
+  ListenerProviders,
+  WebhookProviders
+>;
