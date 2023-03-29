@@ -55,6 +55,22 @@ export const registerWebhooks: WebhookRegister = <T>(webhooksArray: WebhookRegis
   }, obj);
 };
 
+export const getProviderFn =
+  (NAME: string, AUTHOR: string) =>
+  (provider: string): string => {
+    const regex = /((^[0-9]+[a-z]+)|(^[a-z]+[0-9]+))+[0-9a-z]+$/i;
+
+    if (!NAME || !AUTHOR) {
+      throw new Error('getProvider: author and name values must both be set');
+    }
+
+    if (!provider.match(regex)) {
+      throw new Error(`getProvider: ${provider} is not a valid provider string segment`);
+    }
+
+    return `${AUTHOR}.${NAME}.${provider}`;
+  };
+
 export type FormConfiguration = PluginFormConfiguration<
   ActionProviders,
   CredentialProviders,
