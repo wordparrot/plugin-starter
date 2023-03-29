@@ -1,4 +1,4 @@
-import { getProvider } from 'identity';
+import { getProvider } from '../identity';
 
 export enum ListenerProviders {
   /* 

@@ -9,6 +9,8 @@ const filenames = [
   './src/credentials/providers.js',
   './src/listeners/providers.js',
   './src/webhooks/providers.js',
+  './src/identity.js',
+  './src/register.js',
 ];
 
 return Promise.all(

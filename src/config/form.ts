@@ -1,4 +1,4 @@
-import { FormConfiguration } from 'register';
+import { FormConfiguration } from '../register';
 
 const Form: FormConfiguration = {
   actions: [
