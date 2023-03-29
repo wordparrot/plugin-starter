@@ -1,5 +1,10 @@
 import { FormConfiguration } from '../register';
 
+import { ActionProviders } from '../actions/providers';
+import { CredentialProviders } from '../credentials/providers';
+import { ListenerProviders } from '../listeners/providers';
+import { WebhookProviders } from '../webhooks/providers';
+
 const Form: FormConfiguration = {
   actions: [
     /* 
