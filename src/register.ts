@@ -57,7 +57,7 @@ export const registerWebhooks: WebhookRegister = <T>(webhooksArray: WebhookRegis
 
 export const getProviderFn =
   (NAME: string, AUTHOR: string) =>
-  (provider: string): string => {
+  (provider: string): any => {
     const regex = /((^[0-9]+[a-z]+)|(^[a-z]+[0-9]+))+[0-9a-z]+$/i;
 
     if (!NAME || !AUTHOR) {

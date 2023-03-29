@@ -1,10 +1,9 @@
 import { getProvider } from 'identity';
 
-export enum ActionProviders {}
-/* 
+export enum ActionProviders {
+  /* 
         Enter action provider strings here.
 
-        Example:
-        MY_NEW_ACTION = getProvider('my-new-action'),
-
     */
+  MY_NEW_ACTION = getProvider('my-new-action'),
+}
