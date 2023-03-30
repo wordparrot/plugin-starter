@@ -9,7 +9,7 @@ const PluginJson: PluginJsonConfiguration = {
   platform: '',
   website: '',
   version: '0.0.0',
-  sourceVersion: '',
+  sourceVersion: '0.0.1',
   repository: '',
   author: 'author',
   license: '',
