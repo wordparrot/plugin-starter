@@ -2,7 +2,7 @@ import { ActionFormConfiguration } from 'wordparrot-types';
 
 import { ActionProviders } from '../../providers';
 
-export const sampleFormConfig: ActionFormConfiguration<ActionProviders> = {
+export const SampleActionFormConfig: ActionFormConfiguration<ActionProviders> = {
   name: 'My New Action (This is how users will see your action)',
   description: 'Describe in one sentence what it does...',
   provider: ActionProviders.MY_NEW_ACTION,

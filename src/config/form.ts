@@ -1,10 +1,10 @@
 import { FormConfiguration } from '../register';
 
 // Actions
-import { sampleFormConfig } from '../actions/all/Sample/sample.export';
+import { SampleActionFormConfig } from '../actions/all/Sample/sample.formconfig';
 
 // Credentials
-import { sampleCredentialFormConfig } from '../credentials/all/SampleCredential/sample-credential.export';
+import { SampleCredentialFormConfig } from '../credentials/all/SampleCredential/sample-credential.formconfig';
 
 // Listeners
 
@@ -15,14 +15,14 @@ const Form: FormConfiguration = {
     /* 
     Enter your action form configuration here. You'll need to register the provider name in ./providers.ts
     
-      sampleFormConfig,
+      SampleActionFormConfig,
     */
   ],
   credentials: [
     /* 
     Enter your sample credential form configuration here.
     
-      sampleCredentialFormConfig,
+      SampleCredentialFormConfig,
     */
   ],
   listeners: [],
