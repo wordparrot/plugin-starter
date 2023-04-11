@@ -6,6 +6,7 @@ import { getProviderFn } from './register';
 */
 export const PLUGIN_NAME = '#';
 export const PLUGIN_AUTHOR = '#';
+export const PLUGIN_VERSION = '0.0.0';
 
 /* 
     This function is imported into actions/webhooks/listeners/prompts and can be used to produce valid provider strings.

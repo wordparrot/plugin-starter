@@ -31,9 +31,6 @@ return Promise.all(
         );
       });
   })
-  .then(() => {
-    console.log('extraneous js files deleted.');
-  })
   .catch(() => {
     console.log('Cleanup providers: One or more providers files was not found.');
   });

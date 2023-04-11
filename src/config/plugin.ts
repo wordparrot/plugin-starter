@@ -1,17 +1,19 @@
 import { PluginJsonConfiguration } from 'wordparrot-types';
 
+import { PLUGIN_NAME, PLUGIN_AUTHOR, PLUGIN_VERSION } from '../identity';
+
 const PluginJson: PluginJsonConfiguration = {
-  name: 'plugin-starter',
+  name: PLUGIN_NAME,
+  author: PLUGIN_AUTHOR,
+  version: PLUGIN_VERSION,
   title: '',
   description: '',
   private: false,
   hubPluginId: '',
   platform: '',
   website: '',
-  version: '0.0.0',
   sourceVersion: '0.0.1',
   repository: '',
-  author: 'author',
   license: '',
   logo: '',
   categories: [],
