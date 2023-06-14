@@ -18,6 +18,19 @@ const PluginJson: PluginJsonConfiguration = {
   logo: '',
   categories: [],
   subcategories: [],
+  attachments: [
+    // {
+    //   id: "1",
+    //   title: "Test.txt",
+    //   content: "Testing out stuff.",
+    //   author: "wordparrot",
+    //   version: "1.0.0",
+    //   filename: "test.txt",
+    //   format: "txt",
+    //   size: 100,
+    //   date: Date.now(),
+    // }
+  ],
 };
 
 export default PluginJson;
