@@ -20,8 +20,6 @@ console.log(`${pJson.author}.${pJson.name}`);
 console.log();
 console.log(colorCode, 'Exporting version:');
 console.log(pJson.version);
-console.log();
-console.log();
 
 if (formJson.actions.length) {
   console.log(colorCode, `Actions (${formJson.actions.length}):`);
@@ -88,12 +86,7 @@ if (pJson.name !== PLUGIN_VALUES.PLUGIN_NAME) {
 }
 
 console.log('');
-console.log('');
 
 if (!pJson.hubPluginId) {
   console.log(red, 'WARNING: hub plugin ID must be set!');
 }
-
-console.log('');
-console.log('');
-console.log('');

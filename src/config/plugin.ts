@@ -16,6 +16,7 @@ const PluginJson: PluginJsonConfiguration = {
   repository: '',
   license: '',
   logo: '',
+  authLogo: '',
   categories: [],
   subcategories: [],
   attachments: [
