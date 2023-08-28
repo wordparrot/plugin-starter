@@ -3,7 +3,7 @@ import { getProvider } from '../identity';
 export enum ActionProviders {
   /* 
     Enter action provider strings here.
-
   */
-  MY_NEW_ACTION = getProvider('my-new-action'),
+  SAMPLE_ACTION = getProvider('sample-action'),
+  SAMPLE_WRAPPED_ACTION = getProvider('sample-wrapped-action'),
 }
