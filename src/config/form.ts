@@ -1,10 +1,4 @@
-import { FormConfiguration } from '../register';
-
-// Actions
-import { SampleActionFormConfig } from '../actions/all/Sample/sample.formconfig';
-
-// Credentials
-import { SampleCredentialFormConfig } from '../credentials/all/SampleCredential/sample-credential.formconfig';
+import { FormConfiguration } from '../../src/register';
 
 // Listeners
 

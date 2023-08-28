@@ -1,7 +1,7 @@
 import { CredentialRegister } from 'wordparrot-types';
 
-import { registerCredentials } from '../register';
-import { CredentialProviders } from './providers';
+import { registerCredentials } from '@/src/register';
+import { CredentialProviders } from '@/src/credentials/providers';
 
 export const credentials: CredentialRegister = () =>
   registerCredentials<CredentialProviders>([

@@ -1,6 +1,6 @@
 import { PluginJsonConfiguration } from 'wordparrot-types';
 
-import { PLUGIN_NAME, PLUGIN_AUTHOR, PLUGIN_VERSION } from '../identity';
+import { PLUGIN_NAME, PLUGIN_AUTHOR, PLUGIN_VERSION } from '../../src/identity';
 
 const PluginJson: PluginJsonConfiguration = {
   name: PLUGIN_NAME,

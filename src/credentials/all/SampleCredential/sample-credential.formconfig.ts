@@ -1,6 +1,6 @@
 import { CredentialFormConfiguration } from 'wordparrot-types';
 
-import { CredentialProviders } from '../../providers';
+import { CredentialProviders } from '@/src/credentials/providers';
 
 export const SampleCredentialFormConfig: CredentialFormConfiguration<CredentialProviders> = {
   name: 'My New Credential',

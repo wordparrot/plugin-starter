@@ -1,19 +1,17 @@
-import { 
-    PluginMainModule,
-} from 'wordparrot-types'
+import { PluginMainModule } from 'wordparrot-types';
 
-import { actions } from './actions'
-import { credentials } from './credentials'
-import { listeners } from './listeners'
-import { webhooks } from './webhooks'
+import { actions } from '@/src/actions';
+import { credentials } from '@/src/credentials';
+import { listeners } from '@/src/listeners';
+import { webhooks } from '@/src/webhooks';
 
-const ModuleFactory = (): PluginMainModule => {    
-    return {
-        actions,
-        listeners,
-        credentials,
-        webhooks,
-    }
-}
+const ModuleFactory = (): PluginMainModule => {
+  return {
+    actions,
+    listeners,
+    credentials,
+    webhooks,
+  };
+};
 
-export default ModuleFactory
+export default ModuleFactory;

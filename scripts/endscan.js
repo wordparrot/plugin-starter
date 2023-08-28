@@ -14,12 +14,6 @@ const red = '\x1b[31m';
 
 console.log(colorCode, '*** BUILD SUCCESSFUL ***');
 console.log();
-console.log();
-console.log(colorCode, 'Plugin name:');
-console.log(`${pJson.author}.${pJson.name}`);
-console.log();
-console.log(colorCode, 'Exporting version:');
-console.log(pJson.version);
 
 if (formJson.actions.length) {
   console.log(colorCode, `Actions (${formJson.actions.length}):`);
@@ -77,6 +71,14 @@ console.log('');
 console.log('--');
 console.log('');
 
+console.log(colorCode, 'Plugin name:');
+console.log(`${pJson.author}.${pJson.name}`);
+console.log();
+console.log(colorCode, 'Exporting version:');
+console.log(pJson.version);
+
+console.log('');
+
 if (pJson.name !== PLUGIN_VALUES.PLUGIN_NAME) {
   console.log(red, 'WARNING: plugin name in plugin.json does not match name in identity file!');
 } else if (pJson.author !== PLUGIN_VALUES.PLUGIN_AUTHOR) {
@@ -84,8 +86,6 @@ if (pJson.name !== PLUGIN_VALUES.PLUGIN_NAME) {
 } else if (PLUGIN_VALUES.PLUGIN_NAME.length < 3 || PLUGIN_VALUES.PLUGIN_AUTHOR.length < 3) {
   console.log(red, 'WARNING: plugin name and author must be set in identity file!');
 }
-
-console.log('');
 
 if (!pJson.hubPluginId) {
   console.log(red, 'WARNING: hub plugin ID must be set!');

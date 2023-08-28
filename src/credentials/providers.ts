@@ -1,4 +1,4 @@
-import { getProvider } from '../identity';
+import { getProvider } from '../../src/identity';
 
 export enum CredentialProviders {
   /* 

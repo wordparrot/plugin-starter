@@ -1,9 +1,9 @@
 import { ActionRegister } from 'wordparrot-types';
 
-import { registerActions } from '../register';
-import { ActionProviders } from './providers';
+import { registerActions } from '@/src/register';
+import { ActionProviders } from '@/src/actions/providers';
 
-import { sampleAction, sampleActionWrappedFunction } from './all/Sample/sample';
+import { sampleAction, sampleActionWrappedFunction } from '@/src/actions/all/Sample/sample';
 
 export const actions: ActionRegister = () =>
   registerActions<ActionProviders>([

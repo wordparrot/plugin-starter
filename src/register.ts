@@ -14,10 +14,10 @@ import {
   PluginFormConfiguration,
 } from 'wordparrot-types';
 
-import { ActionProviders } from './actions/providers';
-import { CredentialProviders } from './credentials/providers';
-import { ListenerProviders } from './listeners/providers';
-import { WebhookProviders } from './webhooks/providers';
+import { ActionProviders } from '../src/actions/providers';
+import { CredentialProviders } from '../src/credentials/providers';
+import { ListenerProviders } from '../src/listeners/providers';
+import { WebhookProviders } from '../src/webhooks/providers';
 
 export const registerActions: ActionRegister = <T>(actionsArray: ActionRegisterItem<T>[]) => {
   const obj: Record<string, ActionRegisterValues> = {};
