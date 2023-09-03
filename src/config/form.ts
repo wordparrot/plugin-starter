@@ -1,8 +1,12 @@
 import { FormConfiguration } from '../../src/register';
 
-// Listeners
+// Import Actions
 
-// Webhooks
+// Import Credentials
+
+// Import Listeners
+
+// Import Webhooks
 
 const Form: FormConfiguration = {
   actions: [
