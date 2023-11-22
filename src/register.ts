@@ -58,7 +58,7 @@ export const registerWebhooks: WebhookRegister = <T>(webhooksArray: WebhookRegis
 export const getProviderFn =
   (NAME: string, AUTHOR: string) =>
   (provider: string): any => {
-    const regex = /^([a-zA-Z0-9-]){1,20}$/;
+    const regex = /^([a-zA-Z0-9-]){1,45}$/;
 
     if (!NAME || !AUTHOR) {
       throw new Error('getProvider: author and name values must both be set');
