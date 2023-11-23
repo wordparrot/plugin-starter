@@ -1,13 +1,13 @@
 import { getProviderFn } from './register';
 
 /* 
-    Enter the plugin name here. Usually for both values, that is the name of your company or service. Example: instagram.instagram
-*/
-export const PLUGIN_NAME = '#';
-/* 
-    Enter your Wordparrot Hub username here.
+    Enter your Wordparrot Hub username here. Example 'wordparrot'.
 */
 export const PLUGIN_AUTHOR = '#';
+/* 
+    Enter the plugin name here. This will combine with the plugin author to form the first part of a provider string. Example: 'tools'
+*/
+export const PLUGIN_NAME = '#';
 /* 
     Add the unique ID for this plugin, generated on Wordparrot Hub.
     https://hub.wordparrot.com/plugins/create
