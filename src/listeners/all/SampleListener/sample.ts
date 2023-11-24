@@ -1,7 +1,6 @@
-import { DynamicServiceBody, ListenerReturnValue } from 'wordparrot-types';
-import { SandboxLib } from 'wordparrot-types-backend';
+import { DynamicServiceBodyWithLib, ListenerReturnValue } from 'wordparrot-types';
 
-export const sampleListener = async (body: DynamicServiceBody, lib: SandboxLib): ListenerReturnValue => {
+export const sampleListener = async (body: DynamicServiceBodyWithLib): ListenerReturnValue => {
   return {
     passEvent: true,
   };

@@ -1,7 +1,6 @@
-import { DynamicServiceBody, WebhookReturnValue } from 'wordparrot-types';
-import { SandboxLib } from 'wordparrot-types-backend';
+import { DynamicServiceBodyWithLib, WebhookReturnValue } from 'wordparrot-types';
 
-export const sampleWebhook = async (body: DynamicServiceBody, lib: SandboxLib): WebhookReturnValue => {
+export const sampleWebhook = async (body: DynamicServiceBodyWithLib): WebhookReturnValue => {
   const { request, webhook, routeId } = body?.webhook || {};
 
   return {

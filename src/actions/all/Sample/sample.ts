@@ -1,7 +1,6 @@
-import { DynamicServiceBody, ActionReturnValue, ActionReturnFunction } from 'wordparrot-types';
-import { SandboxLib } from 'wordparrot-types-backend';
+import { DynamicServiceBodyWithLib, ActionReturnValue, ActionReturnFunction } from 'wordparrot-types';
 
-export const sampleAction = async (body: DynamicServiceBody, lib: SandboxLib): ActionReturnValue => {
+export const sampleAction = async (body: DynamicServiceBodyWithLib): ActionReturnValue => {
   return {
     message: 'test_succeeded',
     itemsToPassOn: [],
@@ -15,8 +14,7 @@ interface ExampleActionParameters {
 }
 
 const wrappedActionFunction: ActionReturnFunction<ExampleActionParameters> = async (
-  body: DynamicServiceBody,
-  lib: SandboxLib,
+  body: DynamicServiceBodyWithLib,
   config: ExampleActionParameters
 ) => {
   return {
@@ -26,8 +24,8 @@ const wrappedActionFunction: ActionReturnFunction<ExampleActionParameters> = asy
   };
 };
 
-export const sampleActionWrappedFunction = async (body: DynamicServiceBody, lib: SandboxLib): ActionReturnValue => {
-  return wrappedActionFunction(body, lib, {
+export const sampleActionWrappedFunction = async (body: DynamicServiceBodyWithLib): ActionReturnValue => {
+  return wrappedActionFunction(body, {
     a: 'value',
     b: ['value'],
   });
