@@ -1,12 +1,10 @@
-import { ActionRegister } from 'wordparrot-types';
+import { ActionFactory, ActionRegister, ActionRegisterValues } from 'wordparrot-types';
 
 import { registerActions } from '@/src/register';
 import { ActionProviders } from '@/src/actions/providers';
 
-import { sampleAction, sampleActionWrappedFunction } from '@/src/actions/all/Sample/sample';
-
-export const actions: ActionRegister = () =>
-  registerActions<ActionProviders>([
+export const actions: ActionFactory<ActionProviders> = () =>
+  registerActions([
     /* 
     Enter your actions here. You'll need to register the provider name in ./providers.ts
     {

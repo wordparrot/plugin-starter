@@ -1,10 +1,10 @@
-import { WebhookRegister } from 'wordparrot-types';
+import { WebhookFactory } from 'wordparrot-types';
 
 import { registerWebhooks } from '../register';
 import { WebhookProviders } from './providers';
 
-export const webhooks: WebhookRegister = () =>
-  registerWebhooks<WebhookProviders>([
+export const webhooks: WebhookFactory<WebhookProviders> = () =>
+  registerWebhooks([
     /* 
     Enter your webhooks here. You'll need to register the provider name in ./providers.ts
     {

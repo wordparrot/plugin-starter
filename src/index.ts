@@ -1,5 +1,5 @@
-import ModuleFactory from '@/src/main';
+import pluginFactoryFn from '@/src/main';
 
 export default function sandboxModule() {
-  return ModuleFactory();
+  return pluginFactoryFn();
 }

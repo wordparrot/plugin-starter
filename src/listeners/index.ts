@@ -1,10 +1,10 @@
-import { ListenerRegister } from 'wordparrot-types';
+import { ListenerFactory } from 'wordparrot-types';
 
 import { registerListeners } from '../register';
 import { ListenerProviders } from './providers';
 
-export const listeners: ListenerRegister = () =>
-  registerListeners<ListenerProviders>([
+export const listeners: ListenerFactory<ListenerProviders> = () =>
+  registerListeners([
     /* 
     Enter your listeners here. You'll need to register the provider name in ./providers.ts
     {

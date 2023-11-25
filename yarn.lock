@@ -3944,9 +3944,9 @@ ejs@^3.1.5:
     jake "^10.8.5"
 
 electron-to-chromium@^1.4.535:
-  version "1.4.593"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.593.tgz#f71b157f7382f3d3a164f73ff2da772d4b3fd984"
-  integrity sha512-c7+Hhj87zWmdpmjDONbvNKNo24tvmD4mjal1+qqTYTrlF0/sNpAcDlU0Ki84ftA/5yj3BF2QhSGEC0Rky6larg==
+  version "1.4.594"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.594.tgz#f69f207fba80735a44a988df42f3f439115d0515"
+  integrity sha512-xT1HVAu5xFn7bDfkjGQi9dNpMqGchUkebwf1GL7cZN32NSwwlHRPMSDJ1KN6HkS0bWUtndbSQZqvpQftKG2uFQ==
 
 elliptic@^6.5.3, elliptic@^6.5.4:
   version "6.5.4"
@@ -10502,7 +10502,7 @@ with@^7.0.0:
 
 "wordparrot-types@https://github.com/wordparrot/types-core.git":
   version "1.0.0"
-  resolved "https://github.com/wordparrot/types-core.git#bd2011b2255896f8d5d2bdcc39268b5217c8965a"
+  resolved "https://github.com/wordparrot/types-core.git#976036fdb5bca9f11ad1e51715c02ab405fa20d5"
   dependencies:
     "@commitlint/cli" "^16.2.3"
     "@commitlint/config-conventional" "^16.2.1"

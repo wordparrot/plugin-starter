@@ -1,17 +1,13 @@
 import {
-  ActionRegister,
   ActionRegisterItem,
-  ActionRegisterValues,
   CredentialRegister,
   CredentialRegisterItem,
-  CredentialRegisterValues,
   ListenerRegister,
   ListenerRegisterItem,
-  ListenerRegisterValues,
   WebhookRegister,
   WebhookRegisterItem,
-  WebhookRegisterValues,
   PluginFormConfiguration,
+  ActionRegister,
 } from 'wordparrot-types';
 
 import { ActionProviders } from '../src/actions/providers';
@@ -19,37 +15,46 @@ import { CredentialProviders } from '../src/credentials/providers';
 import { ListenerProviders } from '../src/listeners/providers';
 import { WebhookProviders } from '../src/webhooks/providers';
 
-export const registerActions: ActionRegister = <T>(actionsArray: ActionRegisterItem<T>[]) => {
-  const obj: Record<string, ActionRegisterValues> = {};
+export const registerActions = (
+  actionsArray: ActionRegisterItem<ActionProviders>[]
+): ActionRegister<ActionProviders> => {
+  const obj: ActionRegister<ActionProviders> = {};
+
   return actionsArray.reduce((accumulator, counter) => {
-    const provider = counter.provider as unknown as string;
+    const provider = counter.provider;
     accumulator[provider] = counter;
     return accumulator;
   }, obj);
 };
 
-export const registerCredentials: CredentialRegister = <T>(credentialsArray: CredentialRegisterItem<T>[]) => {
-  const obj: Record<string, CredentialRegisterValues> = {};
+export const registerCredentials = (
+  credentialsArray: CredentialRegisterItem<CredentialProviders>[]
+): CredentialRegister<CredentialProviders> => {
+  const obj: CredentialRegister<CredentialProviders> = {};
   return credentialsArray.reduce((accumulator, counter) => {
-    const provider = counter.provider as unknown as string;
+    const provider = counter.provider;
     accumulator[provider] = counter;
     return accumulator;
   }, obj);
 };
 
-export const registerListeners: ListenerRegister = <T>(listenersArray: ListenerRegisterItem<T>[]) => {
-  const obj: Record<string, ListenerRegisterValues> = {};
+export const registerListeners = (
+  listenersArray: ListenerRegisterItem<ListenerProviders>[]
+): ListenerRegister<ListenerProviders> => {
+  const obj: ListenerRegister<ListenerProviders> = {};
   return listenersArray.reduce((accumulator, counter) => {
-    const provider = counter.provider as unknown as string;
+    const provider = counter.provider;
     accumulator[provider] = counter;
     return accumulator;
   }, obj);
 };
 
-export const registerWebhooks: WebhookRegister = <T>(webhooksArray: WebhookRegisterItem<T>[]) => {
-  const obj: Record<string, WebhookRegisterValues> = {};
+export const registerWebhooks = (
+  webhooksArray: WebhookRegisterItem<WebhookProviders>[]
+): WebhookRegister<WebhookProviders> => {
+  const obj: WebhookRegister<WebhookProviders> = {};
   return webhooksArray.reduce((accumulator, counter) => {
-    const provider = counter.provider as unknown as string;
+    const provider = counter.provider;
     accumulator[provider] = counter;
     return accumulator;
   }, obj);

@@ -1,0 +1,3 @@
+[submodule "wordparrot-plugin-testing-env"]
+	path = wordparrot-plugin-testing-env
+	url = git@bitbucket.org:DowJones753/wordparrot-plugin-testing-env.git

@@ -1,21 +1,21 @@
-const fs = require('fs')
-const path = require('path')
-const archiver = require('archiver')
+const fs = require('fs');
+const path = require('path');
+const archiver = require('archiver');
 
-const getPluginJson = require('./get-plugin-json.js')
-const pJson = getPluginJson()
+const getPluginJson = require('./get-plugin-json.js');
+const pJson = getPluginJson();
 
-const inputPath = path.resolve(process.cwd(), 'dist')
+const inputPath = path.resolve(process.cwd(), 'dist');
 const output = fs.createWriteStream(`${pJson.author}.${pJson.name}.zip`);
 const archive = archiver('zip');
 
 output.on('close', function () {
-  console.log(`${pJson.author}.${pJson.name}.zip has been created.`);
-  console.log(archive.pointer() + ' total bytes');
-  console.log(`Version: ${pJson.version}`)
+  const colorCode = '\x1b[36m%s\x1b[0m';
+  console.log(colorCode, `Plugin Zip File Created:`);
+  console.log(archive.pointer() / 1000 + ' KB');
 });
 
-archive.on('error', function(err){
+archive.on('error', function (err) {
   throw err;
 });
 

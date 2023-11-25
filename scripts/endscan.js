@@ -1,8 +1,8 @@
 /* eslint-disable */
-const PLUGIN_VALUES = require('../src/identity');
-
+const fs = require('fs'); // Load the filesystem module
 const path = require('path');
 
+const PLUGIN_VALUES = require('../src/identity');
 const getPluginJson = require('./get-plugin-json.js');
 
 const pJson = getPluginJson();
@@ -73,6 +73,27 @@ console.log('');
 
 console.log(colorCode, 'Plugin name:');
 console.log(`${pJson.author}.${pJson.name}`);
+
+// const dirSize = directory => {
+//   const files = fs.readdirSync( directory );
+//   const stats = files.map( file => fs.statSync( path.join( directory, file ) ) );
+
+//   let size = 0;
+//   for ( const stat of stats ) size += stat.size;
+//   return size;
+// };
+
+// const fileSizeInBytes = dirSize('dist');
+
+// console.log(fileSizeInBytes)
+
+// // Convert the file size to megabytes (optional)
+// const fileSizeInKilobytes = fileSizeInBytes / (1024 ** 2);
+
+// console.log();
+// console.log(colorCode, 'Plugin size:');
+// console.log(`${fileSizeInKilobytes} KB`);
+
 console.log();
 console.log(colorCode, 'Exporting version:');
 console.log(pJson.version);
