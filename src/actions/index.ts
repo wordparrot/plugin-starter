@@ -1,4 +1,4 @@
-import { ActionFactory, ActionRegister, ActionRegisterValues } from 'wordparrot-types';
+import { ActionFactory } from 'wordparrot-types';
 
 import { registerActions } from '@/src/register';
 import { ActionProviders } from '@/src/actions/providers';
