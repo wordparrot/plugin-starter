@@ -113,7 +113,7 @@
     "typescript-transform-paths": "^3.4.6",
     "webpack": "^5.88.2",
     "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.3.1",
+    "webpack-dev-server": "^5.0.4",
     "webpack-merge": "^5.8.0",
     "wordparrot-types": "https://github.com/wordparrot/types-core.git",
     "wordparrot-types-backend": "https://github.com/wordparrot/types-backend.git"
