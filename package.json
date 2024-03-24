@@ -24,9 +24,9 @@
     "prettier:check": "prettier --config ./.prettierrc --check .",
     "prettier:write": "prettier --config ./.prettierrc --write .",
     "compile-config": "tsc src/config/*.ts ",
-    "copy-config": "node ./scripts/convert-json.js && node ./scripts/create-plugin-folder.js && node ./scripts/copy-json.js",
-    "copy-assets": "node ./scripts/assets.js && node ./scripts/zip.js",
-    "cleanup": "node ./scripts/endscan.js && node ./scripts/cleanup-json.js && node ./scripts/cleanup-providers.js"
+    "copy-config": "node ./src/scripts/convert-json.js && node ./src/scripts/create-plugin-folder.js && node ./src/scripts/copy-json.js",
+    "copy-assets": "node ./src/scripts/assets.js && node ./src/scripts/zip.js",
+    "cleanup": "node ./src/scripts/endscan.js && node ./src/scripts/cleanup-json.js && node ./src/scripts/cleanup-providers.js"
   },
   "browserslist": {
     "production": [

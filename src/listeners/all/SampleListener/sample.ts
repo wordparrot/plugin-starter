@@ -1,6 +1,6 @@
-import { Params, ListenerReturnValue } from 'wordparrot-types';
+import { ListenerReturnValue, Body } from 'wordparrot-types';
 
-export const sampleListener = async (params: Params): ListenerReturnValue => {
+export const sampleListener = async (body: Body): ListenerReturnValue => {
   return {
     passEvent: true,
   };

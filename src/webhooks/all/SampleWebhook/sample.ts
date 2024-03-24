@@ -1,7 +1,7 @@
-import { Params, WebhookReturnValue } from 'wordparrot-types';
+import { Body, WebhookReturnValue } from 'wordparrot-types';
 
-export const sampleWebhook = async (params: Params): WebhookReturnValue => {
-  const { request, webhook, routeId } = params.webhook;
+export const sampleWebhook = async (body: Body): WebhookReturnValue => {
+  const { request, webhook, routeId } = body.webhook;
 
   return {
     webhookResponse: {

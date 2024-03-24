@@ -2,7 +2,7 @@
 const fs = require('fs'); // Load the filesystem module
 const path = require('path');
 
-const PLUGIN_VALUES = require('../src/identity');
+const PLUGIN_VALUES = require('../identity');
 const getPluginJson = require('./get-plugin-json.js');
 
 const pJson = getPluginJson();
